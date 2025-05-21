@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Mars",
+        "image": "images/mars.jpg",
+        "description": "Mars is the fourth planet from the Sun and is often called the 'Red Planet'."
+    },
+    {
+        "name": "Jupiter",
+        "image": "images/jupiter.jpg",
+        "description": "Jupiter is the largest planet in our solar system and has a Great Red Spot."
+    },
+    {
+        "name": "Voyager 1",
+        "image": "images/voyager.jpg",
+        "description": "Voyager 1 is the farthest spacecraft from Earth, launched in 1977."
+    }
+]

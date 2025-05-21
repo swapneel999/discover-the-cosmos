@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover the Cosmos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Night Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="btn btn-outline-light">
+            <i class="moon-icon">🌙</i>
+            <i class="sun-icon">☀️</i>
+        </button>
+    </div>
+
+    <!-- Parallax Hero Section -->
+    <section class="hero text-white text-center d-flex align-items-center justify-content-center">
+        <div class="parallax-container">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="content">
+                <h1 data-aos="zoom-in">🚀 Discover the Cosmos</h1>
+                <p data-aos="fade-up">Explore planets, missions & more</p>
+                <a href="#planets" class="btn btn-outline-light mt-3" data-aos="fade-up">Start Exploring</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Solar System Map -->
+    <section class="solar-system-section">
+        <div class="solar-system-container">
+            <div class="sun"></div>
+            <div class="orbit mercury-orbit">
+                <div class="planet mercury" data-planet="mercury"></div>
+            </div>
+            <div class="orbit venus-orbit">
+                <div class="planet venus" data-planet="venus"></div>
+            </div>
+            <div class="orbit earth-orbit">
+                <div class="planet earth" data-planet="earth"></div>
+            </div>
+            <div class="orbit mars-orbit">
+                <div class="planet mars" data-planet="mars"></div>
+            </div>
+            <div class="orbit jupiter-orbit">
+                <div class="planet jupiter" data-planet="jupiter"></div>
+            </div>
+            <div class="orbit saturn-orbit">
+                <div class="planet saturn" data-planet="saturn"></div>
+            </div>
+            <div class="orbit uranus-orbit">
+                <div class="planet uranus" data-planet="uranus"></div>
+            </div>
+            <div class="orbit neptune-orbit">
+                <div class="planet neptune" data-planet="neptune"></div>
+            </div>
+        </div>
+        <div class="solar-system-content">
+            <h2>Our Solar System</h2>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="main-content">
+        <!-- Planet Cards (Rendered from JSON) -->
+        <section id="planets" class="container my-5 py-5">
+            <h2 class="text-center mb-4" data-aos="fade-down">🪐 Featured Cosmic Bodies</h2>
+            <div id="planet-container" class="row g-4"></div>
+        </section>
+
+        <!-- How It Was Built -->
+        <section class="container my-5 py-5" id="tutorial">
+            <h3 data-aos="fade-right">🧑‍💻 How This Was Built</h3>
+
+            <div class="accordion mt-3" id="featureAccordion">
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#feature1">
+                            Interactive Solar System
+                        </button>
+                    </h2>
+                    <div id="feature1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            The solar system visualization uses CSS animations and transforms to create realistic planet orbits. Each planet has its own orbit radius and animation duration, creating a dynamic and engaging display. The planets are positioned using CSS custom properties and transform-origin for precise orbital paths.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#feature2">
+                            Secure Login System
+                        </button>
+                    </h2>
+                    <div id="feature2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            The login system uses bcrypt for secure password hashing and comparison. The server implements proper routing to ensure the login page is the first page users see. After successful authentication, users are redirected to the main content using JavaScript's fetch API and proper error handling.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#feature3">
+                            Parallax Scrolling
+                        </button>
+                    </h2>
+                    <div id="feature3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            The hero section uses a layered parallax effect with stars and twinkling animations. Multiple background layers move at different speeds using CSS animations and z-index positioning, creating a sense of depth and movement as users scroll.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#feature4">
+                            Dynamic JSON Data Rendering
+                        </button>
+                    </h2>
+                    <div id="feature4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            The planet cards are rendered using JavaScript. A `fetch()` request is made to the Express backend (`/data/planets`), which returns a JSON array. The data is then used to dynamically build Bootstrap card elements and insert them into the page.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#feature5">
+                            Express.js Backend
+                        </button>
+                    </h2>
+                    <div id="feature5" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            A Node.js + Express server handles routing, static file serving, and API endpoints. The server implements proper middleware ordering to ensure correct routing, with the login page as the default route. It also serves JSON data for the planet cards and handles user authentication.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
