@@ -30,7 +30,7 @@ An interactive web application that lets users explore the wonders of our solar 
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone [[repository-url](https://github.com/swapneel999/discover-the-cosmos/)]
    ```
 
 2. Install dependencies:
@@ -89,6 +89,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments 🙏
 
-- NASA for space imagery and data
+- Unsplash & NASA for space imagery and data
 - Bootstrap team for the amazing framework
 - AOS library for scroll animations 
